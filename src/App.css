@@ -1,0 +1,26 @@
+.page{
+    display: flex;
+}
+.column{
+    flex: 50%;
+}
+
+.row{
+    border: 1px solid black;
+}
+
+.cell{
+    padding: 5px;
+    border: 1px solid lightgray;
+    
+}
+
+.top{
+    padding: 10px;
+    border: 1px solid gray;
+    width: 100px;
+}
+
+th{
+    width: fit-content;
+}
