@@ -3,9 +3,11 @@ import Song from "./Song";
 import data from "./data";
 
 class SongList extends React.Component {
+    
+
     renderSongs = () => {
         return data.map((c) => (
-            <Song key={c.id} songName={c.songName} artist={c.artist} year={c.year} />
+            <Song key={c.id} remove={this.props.remove} id={c.id} props={this.props} songName={c.songName} artist={c.artist} year={c.year} />
         ))
     }
     render () {

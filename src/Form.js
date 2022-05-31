@@ -4,6 +4,7 @@ import data from "./data";
 
 class Form extends React.Component {
     state = {
+        id:data.length++,
         songName:"",
         artist:"",
         year:""
@@ -17,6 +18,7 @@ class Form extends React.Component {
             artist:"",
             year:""
         })
+        this.props.setState(!this.props.state)
     }
 
     handleChange = (e) =>{
@@ -27,7 +29,8 @@ class Form extends React.Component {
 
     render () {
         return(
-            <form onSubmit={this.handleSubmit}>Add New Song
+            <form onSubmit={this.handleSubmit}>
+                <h2>Add New Song</h2>
                 <input label="Song Name"
                 placeholder="song name"
                 name="songName"
